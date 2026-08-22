@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Video Translator</title><link rel="stylesheet" href="/style.css"></head>
+<body><main class="app">
+<section class="card"><h1>🔐 Gemini API Key</h1><div class="row">
+<input id="apiKey" type="password" placeholder="Paste Gemini API key">
+<button id="showKey">Show</button><button id="testKey">Test</button></div>
+<small id="keyStatus">Key is used for the current requests and is not saved by this app.</small></section>
+<section class="card"><h2>🎬 AI Video Translator & Dubbing</h2>
+<input id="video" type="file" accept="video/*"><video id="preview" controls hidden></video>
+<div class="grid">
+<label>Language<select id="target"><option>Hindi</option><option>Myanmar</option><option>English</option></select></label>
+<label>Voice<select id="voice"><option>Kore</option><option>Puck</option><option>Charon</option><option>Fenrir</option><option>Leda</option><option>Aoede</option><option>Orus</option><option>Zephyr</option></select></label>
+<label>Style<select id="style"><option value="normal">Normal</option><option value="dramatic">Drama</option><option value="soft">Soft / Sweet</option></select></label>
+<label>Voice speed<input id="speed" type="range" min=".5" max="1.5" step=".05" value="1"><span id="speedValue">1.00x</span></label>
+<label>Zoom<input id="zoom" type="range" min="1" max="1.5" step=".05" value="1"><span id="zoomValue">1.00x</span></label>
+<label class="check"><input id="flip" type="checkbox"> Flip video</label>
+</div>
+<p class="note">Maximum video length: <b>90 minutes</b>. Long videos are analyzed in 10-minute chunks automatically.</p>
+<div class="actions"><button id="analyze" class="primary">✨ Analyze & Translate</button><button id="render" class="success" disabled>🎙️ Generate & Download Dub</button></div>
+<div id="progress"></div><pre id="result"></pre></section></main><script src="/app.js"></script></body></html>
