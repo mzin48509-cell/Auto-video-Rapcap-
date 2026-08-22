@@ -1,0 +1,12 @@
+{
+  "name": "ai-video-translator",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"start": "node server.js"},
+  "dependencies": {
+    "@google/genai": "^1.33.0",
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  }
+}
